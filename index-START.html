@@ -44,8 +44,18 @@
     // console.clear();
 
     // Viewing DOM Elements
+    const p = document.querySelector('p');
+    console.log(p);
+    console.dir(p);
 
     // Grouping together
+    dogs.forEach(dog => {
+      console.group(`View ${dog.name}`);
+        console.log(`Hi my name is ${dog.name}!`);
+        console.log(`I am ${dog.age} years old!`);
+        console.log(`That's ${dog.age * 7} in dog years!`);
+      console.groupEnd();
+    });
 
     // counting
 
