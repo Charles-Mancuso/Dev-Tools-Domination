@@ -50,7 +50,7 @@
 
     // Grouping together
     dogs.forEach(dog => {
-      console.group(`View ${dog.name}`);
+      console.groupCollapsed(`View ${dog.name}`);
         console.log(`Hi my name is ${dog.name}!`);
         console.log(`I am ${dog.age} years old!`);
         console.log(`That's ${dog.age * 7} in dog years!`);
@@ -58,8 +58,27 @@
     });
 
     // counting
+    console.count('Charles');
+    console.count('Charles');
+    console.count('Charles');
+    console.count('Steven');
+    console.count('Steven');
+    console.count('Charles');
+    console.count('Charles');
+    console.count('Steven');
+    console.count('Steven');
+    console.count('Steven');
+    console.count('Steven');
+    console.count('Charles');
 
     // timing
+    console.time('fetching data');
+    fetch('https://api.github.com/users/Charles-Mancuso')
+      .then(data => data.json())
+      .then(data => {
+        console.timeEnd('fetching data');
+        console.log(data);
+      });
 
   </script>
 </body>
